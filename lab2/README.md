@@ -8,10 +8,11 @@
 
 
 
-2. Create your lab 1 directory
+2. Create your lab directory
 
 ```sh
-cd ~  # change directory
+NAME="Eric_Smith"  # pay attention to the underscore here
+cd ~
 mkdir ${NAME}  # NAME is a vairable defined above
 cd ${NAME}
 mkdir lab1
