@@ -77,6 +77,8 @@ wget https://raw.githubusercontent.com/wjidea/BTECH610_Bioinformatics/main/lab1/
 # if wget not working
 curl https://raw.githubusercontent.com/wjidea/BTECH610_Bioinformatics/main/lab1/sonnet_18.txt -o sonnet_18.txt
 
+curl https://raw.githubusercontent.com/wjidea/BTECH610_Bioinformatics/main/lab1/words -o words
+
 # as we do not have the remote server at the moment, we cannot test scp or rsync right now.
 scp username@hostname/Path2Folder/FILENAME .
 rsync -avz -e ssh username@hostname:/Path2Folder .
