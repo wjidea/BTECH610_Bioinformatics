@@ -12,34 +12,95 @@
 
 ```sh
 cd ~  # change directory
-mkdir ${NAME}  # NAME is a vairable defined above
-cd ${NAME}
+mkdir jwang  # make a new directory, remember to change to your name
+cd jwang 
 mkdir lab1
 cd lab1
+
+pwd  # present working directory
+
+touch file1.txt  # create an empty file 
+echo "ABC" > file2.txt  # create a file with ABC cc
+echo "ABC\nEFG" > file3.txt
+
+ls
 ```
 
-3. Download a file from NCBI
-
-   FTP directory for RefSeq assembly
-
-   https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2_ASM584v2/
+3. View file contents
 
 ```sh
-# download the genome
-wget -c https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2_ASM584v2/GCF_000005845.2_ASM584v2_genomic.fna.gz -O ecoli_genome_seq.fna.gz
+cat file3.txt  # check what you are seeing here
+head -1 file3.txt
+tail -1 file3.txt
 
-# download the cds sequences
-wget -c https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2_ASM584v2/GCF_000005845.2_ASM584v2_cds_from_genomic.fna.gz -O ecoli_cds_seq.faa.gz
+# less is more
+more file3.txt
+less file3.txt
 
-# download protein sequences
-wget -c https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2_ASM584v2/GCF_000005845.2_ASM584v2_protein.faa.gz -O ecoli_protein_seq.faa.gz
+# let check some big files
+head -10 /usr/share/dict/words
+tail -10 /usr/share/dict/words
+```
+
+4. Renaming, Copying and Deleting Files and Directories
+
+```sh
+touch file4.txt
+mkdir test
+rmdir test
+rm file1.txt
+cp file2.txt file2_cp.txt
+mv file2.txt test/
+mv file2_cp.txt file2_1.txt
+
+```
+
+5. Counting, Sorting and Redirecting Output
+
+```sh
+wc /usr/share/dict/words
+
+wc -l /usr/share/dict/words
+
+seq 1 100 | shuf > random_number.txt 
+cat random_number.txt | sort | uniq
 ```
 
 
 
-4. Move downloaded genome to a reference folder
+6. Downloading and Transferring Data
 
 ```sh
-mkdir 
+wget 
+```
+
+
+
+
+
+
+
+
+
+4. 
+
+
+
+5. Questions from presentation
+
+How many chromosomes in the genome, estimate the genome size?
+
+```sh
+gzcat ecoli_genome_seq.fna.gz | grep '>' -v | wc -l -c
+```
+
+How many cds sequence record in the fasta file? What is the gene density here # genes/Mbp?
+
+```sh
+```
+
+What is the last gene record name in CDS file?
+
+```sh
 ```
 

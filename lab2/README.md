@@ -1,4 +1,4 @@
-# Lab 1 Introduction to Linux
+# Lab 2 Introduction to Linux
 
 1. Setup Shell terminal on your laptop
    - If you are using a window laptop, you will need to install the virtualbox and ubuntu image
@@ -21,8 +21,10 @@ cd lab1
 
 3. Download a file from NCBI
 
-   FTP directory for RefSeq assembly
+   Escherichia coli str. K-12 substr. MG1655, complete genome
 
+   FTP directory for RefSeq assembly
+   
    https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2_ASM584v2/
 
 ```sh
@@ -34,7 +36,24 @@ wget -c https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2
 
 # download protein sequences
 wget -c https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2_ASM584v2/GCF_000005845.2_ASM584v2_protein.faa.gz -O ecoli_protein_seq.faa.gz
+
+# download genome annotation
+wget -c https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2_ASM584v2/GCF_000005845.2_ASM584v2_genomic.gtf.gz -O ecoli_genome_annotation.gtf.gz
 ```
+
+decompress those files
+
+```sh
+gunzip ecoli_genome_seq.fna.gz
+
+gunzip ecoli_cds_seq.faa.gz
+
+gunzip ecoli_protein_seq.faa.gz
+
+gunzip ecoli_genome_annotation.gtf.gz
+```
+
+
 
 
 
