@@ -71,27 +71,50 @@ cat random_number.txt | sort | uniq
 6. Downloading and Transferring Data
 
 ```sh
-wget 
+# download sonnet 18
+wget https://raw.githubusercontent.com/wjidea/BTECH610_Bioinformatics/main/lab1/sonnet_18.txt
+
+# as we do not have the remote server at the moment, we cannot test scp or rsync right now.
+scp username@hostname/Path2Folder/FILENAME .
+rsync -avz -e ssh username@hostname:/Path2Folder .
+```
+
+
+
+7. Find and Replace
+
+```sh
+# search thee used in sonnet 18
+grep thee sonnet_18.txt
+cat sonnet_18.txt | sed 's/thee/you/'
+
+# wild card *
+ls *.txt
+
+# wild card ?
+ls file?.txt
+```
+
+
+
+8. get help or check the manual
+
+```sh
+man sed
 ```
 
 
 
 
 
+9. Questions from presentation
 
-
-
-
-4. 
-
-
-
-5. Questions from presentation
+If you finish early, you can jump to lab2 to work on those questions.
 
 How many chromosomes in the genome, estimate the genome size?
 
 ```sh
-gzcat ecoli_genome_seq.fna.gz | grep '>' -v | wc -l -c
+
 ```
 
 How many cds sequence record in the fasta file? What is the gene density here # genes/Mbp?
