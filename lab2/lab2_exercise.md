@@ -222,7 +222,7 @@ seqkit stats -a ecoli_genome_seq.fna
 
 
 
-
+Try some other functions, sequence to tabular data `seqkit fx2tab`
 
 
 
