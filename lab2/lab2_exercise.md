@@ -193,6 +193,10 @@ curl -s https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -o
 bash Miniconda3-latest-Linux-x86_64.sh
 ```
 
+### Warning, if you are using a mac, please change the link above to macOS link.
+
+
+
 it will prompt you to answer a few questions. 
 
 
@@ -245,5 +249,7 @@ What is the last gene record name in CDS file?
 
 ```sh
 # hint: tail
+
+# can we do it with seqkit fx2tab and tab2fx?
 ```
 
