@@ -88,7 +88,8 @@ ln -s ../ref/ecoli_genome_seq.fna .
 ln -s ../ref/ecoli_cds_seq.fna .
 ln -s ../ref/ecoli_protein_seq.faa .
 ln -s ../ref/ecoli_genome_annotation.gtf .
-ln -s ../ref/ecoli_feature_count.txt.gz .
+ln -s ../ref/ecoli_feature_count.txt .
+ln -s ../ref/ecoli_feature_table.txt .
 ```
 
 Can you convert this 5 command using a loop statement?
@@ -141,7 +142,7 @@ What did you notice? and why?
 Let's take a look at the NCBI annotation featue counts file
 
 ```sh
-less ecoli_feature_count.txt.gz
+less ecoli_feature_count.txt
 ```
 
 Try explore the file with your awk commands
