@@ -3,10 +3,9 @@
 1. Create your lab directory
 
 ```sh
-NAME="change_you_name_here" # change your name in your home directory
-cd ~
-mkdir ${NAME}  # NAME is a vairable defined above
-cd ${NAME}
+cd ~  # change to home directory
+mkdir btech # create btech directory if you don't have one
+cd btech 
 mkdir lab2
 cd lab2
 ```
@@ -24,7 +23,7 @@ https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2_ASM584v
 Prepare directories
 
 ```sh
-cd ${NAME}
+cd ~/btech
 mkdir ref
 cd ref
 ```
