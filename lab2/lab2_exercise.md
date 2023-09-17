@@ -95,6 +95,7 @@ ln -s ../ref/ecoli_feature_table.txt .
 Can you convert this 5 command using a loop statement?
 
 ```sh
+for file in ../ref/ecoli*; do echo ln -s $file .; done
 ```
 
 
@@ -108,6 +109,7 @@ grep '>' ecoli_genome_seq.fna
 How can you get the chromosome names with the GTF file? Try it with cut, sort, and uniq
 
 ```sh
+awk -F"\t" 'NR > 3 {print $1}' ecoli_genome_annotation.gtf | sort | uniq
 ```
 
 
@@ -117,18 +119,19 @@ How can you get the chromosome names with the GTF file? Try it with cut, sort, a
 Let's count from the protein sequence file first
 
 ```sh
-grep -c '>' ecoli_protein_seq.faa
+grep -c '>' ecoli_protein_seq.faa  # 4298
 ```
 
-How many genes records in the `ecoli_cds_seq.faa`?
+How many genes records in the `ecoli_cds_seq.fna`?
 
 ```sh
-
+grep -c '>' ecoli_cds_seq.fna  # 4315
 ```
 
 How many genes features in the `ecoli_genome_annotation.gtf`?
 
 ```sh
+awk -F"\t" '$3 == "gene" {sum++} END{print sum}' ecoli_genome_annotation.gtf # 4639
 ```
 
 
