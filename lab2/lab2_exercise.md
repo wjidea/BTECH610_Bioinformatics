@@ -80,7 +80,7 @@ done
 3. Creating symbolic links from ref folder to lab2 folder
 
 ```sh
-cd ~/${NAME}/lab2/
+cd ~/btech/lab2/
 
 # create symbolic links to lab 2 folder
 ln -s ../ref/ecoli_genome_seq.fna .
