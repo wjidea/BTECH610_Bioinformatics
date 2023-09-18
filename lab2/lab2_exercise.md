@@ -94,7 +94,9 @@ ln -s ../ref/ecoli_feature_table.txt .
 Can you convert this 5 command using a loop statement?
 
 ```sh
-for file in ../ref/ecoli*; do echo ln -s $file .; done
+for file in ../ref/ecoli*; do 
+  echo ln -s $file .; 
+done
 ```
 
 
@@ -239,7 +241,7 @@ How many chromosomes in the genome, estimate the genome size?
 
 ```sh
 # hint
-gzcat ecoli_genome_seq.fna.gz | grep '>' -v | wc -l -c
+cat ecoli_genome_seq.fna | grep '>' -v | wc -l -c
 ```
 
 How many cds sequence record in the fasta file? What is the gene density here # genes/Mbp?
