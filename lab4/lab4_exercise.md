@@ -72,8 +72,8 @@ Type "help", "copyright", "credits" or "license" for more information.
        fh.close()
    
    def gc_fraction(seq):
-     GC_bases = seq.count('G') + seq.count('g') + seq.count('C') + seq.count('c')
-     return round(GC_bases/len(seq), 2)
+       GC_bases = seq.count('G') + seq.count('g') + seq.count('C') + seq.count('c')
+       return round(GC_bases/len(seq), 2)
    
    if __name__ == "__main__":
        parse_fasta_file(sys.argv[1])
@@ -151,13 +151,7 @@ genetic_codon = {
 # Write your code here:
 # Hint1: make sure len(seq)%3==0
 # Hint2: use range. For example: range(1, len(seq), 3)
-protein=""
-if len(cds_seq)%3 == 0:
-    for i in range(0, len(cds_seq), 3):
-        codon = cds_seq[i:i + 3]
-        protein+= genetic_codon[codon]
 
-print(protein)
 
 ```
 
