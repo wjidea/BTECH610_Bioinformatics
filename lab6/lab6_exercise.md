@@ -50,6 +50,8 @@ if you don't have git
 
 6. set git config
 
+
+
 ```sh
 git config --global user.name "your git user name"
 git config --global user.email "your email address here"
@@ -57,7 +59,7 @@ git config --global user.email "your email address here"
 
 
 
-6. create a markdown notebook
+7. create a markdown notebook
 
 Make some modifications to the code block below and save it to a `README.md` file to lab6 directory
 
@@ -115,27 +117,27 @@ EOF
 
 Let's save the above code block into a `README.md` file
 
-7. Create your own personal Github Token
+8. Create your own personal Github Token
 
 Settings -> Developer settings -> Personal access tokens -> Tokens (classic) -> Generate New Token (classic)
 
-Write a note to your token
+- Write a note to your token
 
-set an expiration date -> Custom -> 12/31/2023
+- set an expiration date -> Custom -> 12/31/2023
 
-Check all boxes under repo
+- Check all boxes under repo
 
-Click Generate token button
+- Click Generate token button 
 
 **Make sure to copy your personal access token now. You won’t be able to see it again!**
 
 
 
-8. create a new repository on the command line
+9. create a new repository on the command line
 
-replace <MY_USERNAME> with your github username
+replace `<MY_USERNAME>` with your github username
 
-replace <MYTOKEN> with token generated above 
+replace `<MYTOKEN>` with token generated above 
 
 ```sh
 git init
@@ -146,5 +148,5 @@ git remote add origin https://<MY_USERNAME>:<MYTOKEN>github.com/<MY_USERNAME>/bt
 git push -u origin main
 ```
 
-9 Now you should be able to see your `README.md` file
+10. Now you should be able to see your `README.md` file
 
