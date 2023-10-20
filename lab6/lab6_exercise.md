@@ -148,5 +148,23 @@ git remote add origin https://<MY_USERNAME>:<MYTOKEN>github.com/<MY_USERNAME>/bt
 git push -u origin main
 ```
 
-10. Now you should be able to see your `README.md` file
+
+
+```sh
+echo "# btech2" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://jwstmary:github.com/jwstmary/btech2.git
+git push -u origin main
+```
+
+
+
+
+
+10. 
+11. 
+12. Now you should be able to see your `README.md` file
 
