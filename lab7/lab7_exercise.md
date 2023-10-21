@@ -61,12 +61,12 @@ For a full list of Ensembl REST API Endpoints: https://rest.ensembl.org/
 5. Use command line tool ncbi dataset to download human transcriptome
 
 ```sh
-datasets download gene gene-id 1 2 3 9 10 11 12 13 14 15 16 17
-datasets download gene symbol ACRV1 A2M --taxon human 
-datasets download gene accession NM_020107.5 NP_001334352.2
-datasets download gene gene-id 672 --include gene,protein
-datasets download gene gene-id 672 --include genome,rna,cds,protein
-datasets download gene gene-id 672 --include none
+datasets download gene gene-id 1 2 3 9 10 11 12 13 14 15 16 17 --filename gene_list_1.zip
+datasets download gene symbol ACRV1 A2M --taxon human --filename ACRV1_A2M.zip
+datasets download gene accession NM_020107.5 NP_001334352.2 --filename gene_list_3.zip
+datasets download gene gene-id 672 --include gene,protein --filename gene_list_4.zip
+datasets download gene gene-id 672 --include gene,rna,cds,protein --filename gene_list_5.zip
+datasets download gene gene-id 672 --include none --filename gene_list_6.zip
 ```
 
 
