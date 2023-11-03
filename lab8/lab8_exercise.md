@@ -17,10 +17,8 @@ conda activate btech
 
 3. Install package with conda
 
-`jq` is a command-line JSON processor. 
-
 ```sh
-conda install -c mysql
+conda install -y mysql
 ```
 
 
