@@ -6,30 +6,28 @@
 
 ```sh
 cd ~/btech
-mkdir example_rnaseq
-cd example_rnaseq
-mkdir 1_clean_qc 2_mapping 3_feature_count 4_DE_analysis data ref
+mkdir lab11
+cd lab11
+curl -s https://raw.githubusercontent.com/wjidea/BTECH610_Bioinformatics/main/lab11/design1.Rdata -o design1.Rdata
 
+curl -s https://raw.githubusercontent.com/wjidea/BTECH610_Bioinformatics/main/lab11/lab11.R -o lab11.R
 
-conda activate
-conda install -c bioconda sra-tools
+curl -s https://raw.githubusercontent.com/wjidea/BTECH610_Bioinformatics/main/lab11/poisson_counting_noise.R -o poisson_counting_noise.R
+
 ```
 
-if conda install failed, we can downloaded compiled binaries from its source
-
-https://github.com/ncbi/sra-tools
 
 
-
-Fastq-dump explained (good reading)
-
-https://github.com/ncbi/sra-tools/wiki/HowTo:-fasterq-dump/32262a567c820086136796b49e4275dfe91bbc5b
+Install Rstudio https://posit.co/download/rstudio-desktop/
 
 
 
 ### 1, download data from SRA and extract fastq files
 
 ```sh
+conda activate
+conda install -c bioconda sra-tools
+
 # download SRR4785492 from SRA
 fasterq-dump SRR4785492
 fasterq-dump SRR4785493
@@ -45,6 +43,14 @@ fasterq-dump SRR4785504
 fasterq-dump SRR4785505
 fasterq-dump SRR4785506
 ```
+
+if conda install failed, we can downloaded compiled binaries from its source
+
+https://github.com/ncbi/sra-tools
+
+Fastq-dump explained (good reading)
+
+https://github.com/ncbi/sra-tools/wiki/HowTo:-fasterq-dump/32262a567c820086136796b49e4275dfe91bbc5b
 
 
 
@@ -129,12 +135,12 @@ library("limma")
 library("edgeR")
 library("Rsubread")
 
-setwd("/data/run/wangj/data/tmp/example_rnaseq/3_feature_count")
+setwd("example_rnaseq/3_feature_count")
 
-targets <- readTargets("/data/run/wangj/data/tmp/example_rnaseq/2_mapping/bamList.txt", sep="")
+targets <- readTargets("example_rnaseq/2_mapping/bamList.txt", sep="")
 
 fc <- featureCounts(files=targets$FeatureCountsFile,
-annot.ext="/data/run/wangj/data/ARCHIVE/sharkeyLab/Isoprene_B2EB3/Atha/genome/Araport11_representative_genes.201606.gtf",
+annot.ext="Araport11_representative_genes.201606.gtf",
 isGTFAnnotationFile=TRUE,
 GTF.featureType="exon",
 GTF.attrType="gene_id",
