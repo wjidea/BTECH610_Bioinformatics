@@ -108,27 +108,3 @@ ls file?.txt
 man sed
 ```
 
-
-
-
-
-9. Questions from presentation
-
-If you finish early, you can jump to lab2 to work on those questions.
-
-How many chromosomes in the genome, estimate the genome size?
-
-```sh
-
-```
-
-How many cds sequence record in the fasta file? What is the gene density here # genes/Mbp?
-
-```sh
-```
-
-What is the last gene record name in CDS file?
-
-```sh
-```
-
