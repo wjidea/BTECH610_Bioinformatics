@@ -59,6 +59,5 @@ bcftools call --ploidy 1 -m -v -o Sacc_cer.renamed.vcf Sacc_cer.renamed.bcf
 
 #S cerevisae
 bcftools call --ploidy 1 -m -v -o Sacc_bayanus.renamed.vcf Sacc_bayanus.renamed.bcf
-
 ```
 

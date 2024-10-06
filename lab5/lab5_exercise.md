@@ -19,7 +19,7 @@ conda activate btech
 3. install dependency packages
 
 ```sh
-conda install jupyterlab pandas seaborn -y 
+conda install jupyterlab pandas seaborn scipy numpy -y 
 ```
 
 
