@@ -54,7 +54,7 @@ show databases like "homo%";
 Connect to the human core database
 
 ```sql
-use homo_sapiens_core_110_38;
+use homo_sapiens_core_113_38;
 ```
 
 List all the tables
