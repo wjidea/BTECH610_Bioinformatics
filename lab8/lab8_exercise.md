@@ -51,7 +51,7 @@ List human databases
 show databases like "homo%";
 ```
 
-Connect to the human core database
+Connect to the human core database, or select the latest core database version. 
 
 ```sql
 use homo_sapiens_core_113_38;
