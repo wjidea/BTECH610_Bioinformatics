@@ -267,7 +267,7 @@ what do you notice about this query? How to fix the error?
 ```sql
 UPDATE Proteins
 SET length = 15
-WHERE protein_id = 6;
+WHERE prot_id = 6;
 ```
 
 
@@ -275,5 +275,5 @@ WHERE protein_id = 6;
 - delete a record in table
 
 ```sql
-DELETE FROM Proteins WHERE protein_id = 4;
+DELETE FROM Proteins WHERE prot_id = 4;
 ```
