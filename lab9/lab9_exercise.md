@@ -1,4 +1,4 @@
-# Lab 9 DNA Sequencing Technologies
+# Lab 9 DNA Sequencing Technologies and Cloud Computing
 
 1. Connect to remote linux server hosted on AWS EC2
 
