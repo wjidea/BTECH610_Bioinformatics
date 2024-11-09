@@ -18,7 +18,10 @@ conda activate btech
 3. Install packages with conda
 
 ```sh
-conda install -c bioconda bwa samtools
+conda config --add channels bioconda
+conda config --add channels conda-forge
+conda install samtools==1.21
+conda install bwa
 ```
 
 Don't panic if you see an error to install bwa when you are using a Apple Silicon MacBook
