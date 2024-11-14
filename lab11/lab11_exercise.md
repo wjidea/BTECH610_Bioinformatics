@@ -22,7 +22,11 @@ Install Rstudio https://posit.co/download/rstudio-desktop/
 
 
 
-### 1, download data from SRA and extract fastq files
+**Step 1-4 are completed ahead of time due to the limit of time and compute resources. Please start your lab from [step 5](###5. Work in R/Rstudio) after you install Rstudio.**
+
+
+
+### 1. download data from SRA and extract fastq files
 
 ```sh
 conda activate
@@ -54,7 +58,7 @@ https://github.com/ncbi/sra-tools/wiki/HowTo:-fasterq-dump/32262a567c82008613679
 
 
 
-### 2, Preprocessing - trim adpater and low quality bases
+### 2. Preprocessing - trim adpater and low quality bases
 
 Trim low-quality sequence and adapters
 
@@ -105,7 +109,7 @@ done
 
 
 
-### 4, featureCounts
+### 4. featureCounts
 
 - preapare featureCount data
 
@@ -166,7 +170,7 @@ save(fc, file='design1.Rdata')
 
 
 
-### work in R/Rstudio
+### 5. Work in R/Rstudio
 
 ```R
 # install packages is absent
