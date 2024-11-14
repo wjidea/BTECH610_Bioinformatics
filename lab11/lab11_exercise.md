@@ -22,7 +22,7 @@ Install Rstudio https://posit.co/download/rstudio-desktop/
 
 
 
-**Step 1-4 are completed ahead of time due to the limit of time and compute resources. Please start your lab from [step 5](###5. Work in R/Rstudio) after you install Rstudio.**
+**Step 1-4 are completed ahead of time due to the limit of time and compute resources. Please start your lab from [step 5](###5.-Work-in-R/Rstudio) after you install Rstudio.**
 
 
 
