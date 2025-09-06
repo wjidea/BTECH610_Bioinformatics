@@ -1,7 +1,7 @@
 # Lab 1 Introduction to Linux
 
 1. Setup Shell terminal on your laptop
-   - If you are using a window laptop, you will need to install the virtualbox and ubuntu image
+   - If you are using a window laptop, you will need to install wsl ubuntu
    - If you are using a Mac, you can use the Terminal from your system
    - If you are using a Linux (e.g., Ubuntu), you can use the Terminal from your system
 
