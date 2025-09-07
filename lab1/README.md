@@ -50,6 +50,7 @@ mkdir test
 rmdir test
 rm file1.txt
 cp file2.txt file2_cp.txt
+mkdir test
 mv file2.txt test/
 mv file2_cp.txt file2_1.txt
 
@@ -58,9 +59,11 @@ mv file2_cp.txt file2_1.txt
 5. Counting, Sorting and Redirecting Output
 
 ```sh
-wc /usr/share/dict/words
+curl https://raw.githubusercontent.com/wjidea/BTECH610_Bioinformatics/main/lab1/words -o words
 
-wc -l /usr/share/dict/words
+wc words
+
+wc -l words
 
 seq 1 100 | shuf > random_number.txt 
 cat random_number.txt | sort | uniq
@@ -76,9 +79,6 @@ wget https://raw.githubusercontent.com/wjidea/BTECH610_Bioinformatics/main/lab1/
 
 # if wget not working
 curl https://raw.githubusercontent.com/wjidea/BTECH610_Bioinformatics/main/lab1/sonnet_18.txt -o sonnet_18.txt
-
-curl https://raw.githubusercontent.com/wjidea/BTECH610_Bioinformatics/main/lab1/words -o words
-
 ```
 
 
