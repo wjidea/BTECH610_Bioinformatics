@@ -37,9 +37,12 @@ tail -1 file3.txt
 more file3.txt
 less file3.txt
 
+# download words file
+curl https://raw.githubusercontent.com/wjidea/BTECH610_Bioinformatics/main/lab1/words -o words
+
 # let check some big files
-head -10 /usr/share/dict/words
-tail -10 /usr/share/dict/words
+head -10 words
+tail -10 words
 ```
 
 4. Renaming, Copying and Deleting Files and Directories
@@ -59,8 +62,6 @@ mv file2_cp.txt file2_1.txt
 5. Counting, Sorting and Redirecting Output
 
 ```sh
-curl https://raw.githubusercontent.com/wjidea/BTECH610_Bioinformatics/main/lab1/words -o words
-
 wc words
 
 wc -l words
