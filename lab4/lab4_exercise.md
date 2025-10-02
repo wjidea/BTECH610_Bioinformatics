@@ -11,7 +11,6 @@ cd lab4
 ```
 
 
-
 2. Let's start a Terminal session first
 
 Activate the btech conda environment
@@ -27,24 +26,16 @@ If you install the conda environment with python=3.10, you should see the follow
 Python 3.10.13
 ```
 
-Then, we can start an interactive python
+Prepare files for today's exercise
 
 ```sh
-python
+curl -s https://raw.githubusercontent.com/wjidea/BTECH610_Bioinformatics/refs/heads/main/lab4/parse_fasta_wo_biopython.py -o parse_fasta_wo_biopython.py
+
+curl -s https://raw.githubusercontent.com/wjidea/BTECH610_Bioinformatics/refs/heads/main/lab4/parse_fasta_biopython.py -o parse_fasta_biopython.py
+
+curl -s https://raw.githubusercontent.com/wjidea/BTECH610_Bioinformatics/refs/heads/main/lab4/ecoli_cds_seq.faa -o ecoli_cds_seq.faa
+
 ```
-
-The python session will look at this:
-
-```python 
-Python 3.10.13 (main, Sep 11 2023, 08:39:02) [Clang 14.0.6 ] on darwin
-Type "help", "copyright", "credits" or "license" for more information.
->>>
-```
-
-
-
-​		**Please don't copy the python prompt `>>>` **
-
 
 
 3. Let's answer the questions from the lecture 
@@ -82,13 +73,19 @@ Type "help", "copyright", "credits" or "license" for more information.
    Let's look at this gc_fraction function, does this function consider all the possible conditions? If not, how can we improve it? Hint: IUPAC code
 
    
+   We can test it with the following python command
+   ```sh
+   python parse_fasta_wo_biopython.py ecoli_cds_seq.faa
+   ```
+
+   
 
    2. Write Python script to parse a Fasta file using Biopython package, print the sequence name, sequence length, and GC content percentage to the stdout using a tab delimiter
 
-   ```sh
-   # install biopython with conda
-   conda install biopython
-   ```
+```sh
+# install biopython with conda
+conda install biopython
+```
 
    run biopython
 
@@ -96,17 +93,21 @@ Type "help", "copyright", "credits" or "license" for more information.
    #!/usr/bin/python3
    import sys
    from Bio import SeqIO
-   from Bio.SeqUtils import GC
+   from Bio.SeqUtils import gc_fraction
    
    def parse_fasta_file(fasta_file_path):
        sequences = SeqIO.parse(fasta_file_path, "fasta")
        for seq_record in sequences:
-           print(seq_record.id, len(seq_record), round(GC(seq_record.seq), 2))
+           print(seq_record.id, len(seq_record), round(gc_fraction(seq_record.seq), 2))
    
    if __name__ == "__main__":
        parse_fasta_file(sys.argv[1])
    
    ```
+
+```sh
+python parse_fasta_biopython.py ecoli_cds_seq.faa
+```
 
 4. Translate CDS into protein sequences
 
