@@ -42,43 +42,43 @@ curl -s https://raw.githubusercontent.com/wjidea/BTECH610_Bioinformatics/refs/he
 
    1. Write Python script to parse a Fasta file without using Biopython package, print the sequence name and sequence length to the stdout using a tab delimiter
 
-   ```python
-   #!/usr/bin/python3
-   
-   import sys
-   
-   def parse_fasta_file(fasta_file_path):
-       fh = open(fasta_file_path)
-       seq = ""
-       seq_name=""
-       for line in fh.readlines():
-           if line.startswith('>'):
-               if len(seq_name) > 0:
-                   print(seq_name, len(seq), gc_fraction(seq))
-               seq_name = line.split(' ')[0][1:]
-               seq = ""
-           else:
-               seq += line.rstrip()
-       print(seq_name, len(seq), gc_fraction(seq))
-       fh.close()
-   
-   def gc_fraction(seq):
-       GC_bases = seq.count('G') + seq.count('g') + seq.count('C') + seq.count('c')
-       return round(GC_bases/len(seq), 2)
-   
-   if __name__ == "__main__":
-       parse_fasta_file(sys.argv[1])
-   ```
+```python
+#!/usr/bin/python3
 
-   Let's look at this gc_fraction function, does this function consider all the possible conditions? If not, how can we improve it? Hint: IUPAC code
+import sys
 
-   
-   We can test it with the following python command
-   ```sh
-   python parse_fasta_wo_biopython.py ecoli_cds_seq.faa
-   ```
+def parse_fasta_file(fasta_file_path):
+    fh = open(fasta_file_path)
+    seq = ""
+    seq_name=""
+    for line in fh.readlines():
+        if line.startswith('>'):
+            if len(seq_name) > 0:
+                print(seq_name, len(seq), gc_fraction(seq))
+            seq_name = line.split(' ')[0][1:]
+            seq = ""
+        else:
+            seq += line.rstrip()
+    print(seq_name, len(seq), gc_fraction(seq))
+    fh.close()
 
-   
+def gc_fraction(seq):
+    GC_bases = seq.count('G') + seq.count('g') + seq.count('C') + seq.count('c')
+    return round(GC_bases/len(seq), 2)
+
+if __name__ == "__main__":
+    parse_fasta_file(sys.argv[1])
+```
+
+Let's look at this gc_fraction function, does this function consider all the possible conditions? If not, how can we improve it? Hint: IUPAC code
+
+
+We can test it with the following python command
+```sh
+python parse_fasta_wo_biopython.py ecoli_cds_seq.faa
+```
+
+
 
    2. Write Python script to parse a Fasta file using Biopython package, print the sequence name, sequence length, and GC content percentage to the stdout using a tab delimiter
 
@@ -87,23 +87,25 @@ curl -s https://raw.githubusercontent.com/wjidea/BTECH610_Bioinformatics/refs/he
 conda install biopython
 ```
 
-   run biopython
+run biopython
 
-   ```python
-   #!/usr/bin/python3
-   import sys
-   from Bio import SeqIO
-   from Bio.SeqUtils import gc_fraction
-   
-   def parse_fasta_file(fasta_file_path):
-       sequences = SeqIO.parse(fasta_file_path, "fasta")
-       for seq_record in sequences:
-           print(seq_record.id, len(seq_record), round(gc_fraction(seq_record.seq), 2))
-   
-   if __name__ == "__main__":
-       parse_fasta_file(sys.argv[1])
-   
-   ```
+```python
+#!/usr/bin/python3
+import sys
+from Bio import SeqIO
+from Bio.SeqUtils import gc_fraction
+
+def parse_fasta_file(fasta_file_path):
+    sequences = SeqIO.parse(fasta_file_path, "fasta")
+    for seq_record in sequences:
+        print(seq_record.id, len(seq_record), round(gc_fraction(seq_record.seq), 2))
+
+if __name__ == "__main__":
+    parse_fasta_file(sys.argv[1])
+
+```
+
+We can test it with the following python command
 
 ```sh
 python parse_fasta_biopython.py ecoli_cds_seq.faa
