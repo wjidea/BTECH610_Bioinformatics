@@ -40,7 +40,9 @@ curl -s https://raw.githubusercontent.com/wjidea/BTECH610_Bioinformatics/refs/he
 
 3. Let's answer the questions from the lecture 
 
-   1. Write Python script to parse a Fasta file without using Biopython package, print the sequence name and sequence length to the stdout using a tab delimiter
+Write Python script to parse a Fasta file without using Biopython package, print the sequence name and sequence length to the stdout using a tab delimiter
+
+### NOTE you don't need to copy the code below, refer to the `parse_fasta_wo_biopython.py` file in your lab4 folder.
 
 ```python
 #!/usr/bin/python3
@@ -88,6 +90,8 @@ conda install -c bioconda biopython=1.82
 ```
 
 run biopython
+### NOTE you don't need to copy the code below, refer to the `parse_fasta_biopython.py` file in your lab4 folder.
+
 
 ```python
 #!/usr/bin/python3
