@@ -8,6 +8,8 @@ mkdir btech # create btech directory if you don't have one
 cd btech 
 mkdir lab5
 cd lab5
+
+curl -s https://raw.githubusercontent.com/wjidea/BTECH610_Bioinformatics/refs/heads/main/lab5/lab5_jupyter_notebook.ipynb -o lab5_jupyter_notebook.ipynb
 ```
 
 2. activate btech conda environment
