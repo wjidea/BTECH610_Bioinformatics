@@ -123,7 +123,7 @@ Settings -> Developer settings -> Personal access tokens -> Tokens (classic) -> 
 
 - Write a note to your token
 
-- set an expiration date -> Custom -> 12/31/2023
+- set an expiration date -> Custom -> 12/31/2025
 
 - Check all boxes under repo
 
