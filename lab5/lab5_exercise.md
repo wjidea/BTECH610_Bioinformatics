@@ -28,8 +28,10 @@ conda install jupyterlab pandas seaborn scipy numpy -y
 
 4. Launch Jupyter Notebook session
 
+make sure you are in lab5 folder
 ```sh
-jupyter lab
+pwd # */lab5/
+jupyter lab lab5_jupyter_notebook.ipynb
 ```
 
 Now let's work on the second part of the lab in a Jupyter Notebook. Please Download the Jupyter notebook to your lab5 folder and open it within Jupyter lab.
