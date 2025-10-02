@@ -84,7 +84,7 @@ python parse_fasta_wo_biopython.py ecoli_cds_seq.faa
 
 ```sh
 # install biopython with conda
-conda install biopython
+conda install -c bioconda biopython=1.82
 ```
 
 run biopython
