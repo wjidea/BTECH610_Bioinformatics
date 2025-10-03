@@ -1,6 +1,7 @@
 # Lab 5 Install Jupyter Notebook
 
 1. Create your lab directory
+Additionally, we are going to download the jupyter notebook for today's lab.
 
 ```sh
 cd ~  # change to home directory
