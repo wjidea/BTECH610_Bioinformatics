@@ -4,7 +4,7 @@
 
 ```sh
 cd ~  # change to home directory
-mkdir btech # create btech directory if you don't have one
+mkdir btech
 cd btech 
 mkdir lab6
 cd lab6
@@ -144,7 +144,7 @@ git init
 git add README.md
 git commit -m "first commit"
 git branch -M main
-git remote add origin https://<MY_USERNAME>:<MYTOKEN>github.com/<MY_USERNAME>/btech610.git
+git remote add origin https://<MY_USERNAME>:<MYTOKEN>@github.com/<MY_USERNAME>/btech610.git
 git push -u origin main
 ```
 
