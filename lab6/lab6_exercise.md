@@ -148,7 +148,7 @@ git remote add origin https://<MY_USERNAME>:<MYTOKEN>github.com/<MY_USERNAME>/bt
 git push -u origin main
 ```
 
-
+Below is an example with my login information. 
 
 ```sh
 echo "# btech2" >> README.md
