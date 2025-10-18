@@ -19,10 +19,10 @@ conda activate btech
 3. Install package with conda
 
 `jq` is a command-line JSON processor. 
+`ncbi-datasets-cli` is a command line tool for accessing NCBI data resources
 
 ```sh
-conda install -c conda-forge jq
-conda install -c conda-forge ncbi-datasets-cli
+conda install -c conda-forge -y jq ncbi-datasets-cli
 ```
 
 
@@ -44,8 +44,6 @@ curl -s 'https://rest.ensembl.org/lookup/id/ENSG00000157764?expand=1' \
 -H 'Content-type:application/json' | \
 jq -r '[.seq_region_name, .start, .end] | @tsv'
 ```
-
-
 
 Query with multiple gene IDs with a bulk query
 
