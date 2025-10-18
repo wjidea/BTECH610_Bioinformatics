@@ -18,7 +18,7 @@ conda activate btech
 
 3. Install package with conda
 
-`jq` is a command-line JSON processor. 
+`jq` is a command-line JSON processor.   
 `ncbi-datasets-cli` is a command line tool for accessing NCBI data resources
 
 ```sh
