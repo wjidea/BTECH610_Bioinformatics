@@ -95,7 +95,7 @@ Next, please find a `command` to decompress those zip files we just downloaded.
     - Gene stable ID version
     - Transcript stable ID
     - Transcript stable ID version
-    - Gene % GC content
+    - Gene type
     - Transcript count
     - Transcript length (including UTRs and CDS)
 - Click top left corner Count to see how many genes selected
