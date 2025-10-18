@@ -26,13 +26,19 @@ conda install -c conda-forge ncbi-datasets-cli
 ```
 
 
-
 4. Database API access - Ensembl API 
 
 Use curl to acquire gene information
 
 Find the species and database for a single identifier e.g. gene, transcript, protein
 
+First let's take a look what's in this API endpoint return
+```sh
+curl -s 'https://rest.ensembl.org/lookup/id/ENSG00000157764?expand=1' \
+-H 'Content-type:application/json' | jq
+```
+  
+Then, we can extract the parts we are interested.   
 ```sh
 curl -s 'https://rest.ensembl.org/lookup/id/ENSG00000157764?expand=1' \
 -H 'Content-type:application/json' | \
@@ -41,7 +47,7 @@ jq -r '[.seq_region_name, .start, .end] | @tsv'
 
 
 
-Query with multiple gene IDs
+Query with multiple gene IDs with a bulk query
 
 ```sh
 curl -s 'https://rest.ensembl.org/lookup/id' \
@@ -51,8 +57,6 @@ curl -s 'https://rest.ensembl.org/lookup/id' \
 -d '{ "ids" : ["ENSG00000157764", "ENSG00000171862" ] }' | \
 jq '.[] | .display_name'
 ```
-
-
 
 For a full list of Ensembl REST API Endpoints: https://rest.ensembl.org/
 
@@ -68,13 +72,14 @@ datasets download gene gene-id 672 --include gene,protein --filename gene_list_4
 datasets download gene gene-id 672 --include gene,rna,cds,protein --filename gene_list_5.zip
 datasets download gene gene-id 672 --include none --filename gene_list_6.zip
 ```
+Next, please find a `command` to decompress those zip files we just downloaded. 
 
 
 
 6. Use Ensembl Biomart Web App
 
 - Navigate to https://useast.ensembl.org/biomart/martview
-- Choose `Ensembl Genes 110` (or the latest release)
+- Choose `Ensembl Genes 115` (or the latest release)
 - Choose dataset: `Human genes (GRCh38.p14)`
 - Click `Filters` link (left column) to select filters
   - select REGION
