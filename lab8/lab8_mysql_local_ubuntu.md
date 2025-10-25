@@ -1,31 +1,31 @@
 ## MySQL Datatabase localhost
 
-1. Step 1: Update packages
+Step 1: Update packages
 ```sh
 sudo apt update
 ```
 
-2. Step 2: Install MySQL Server
+Step 2: Install MySQL Server
 
 ```sh
 sudo apt install mysql-server
 sudo mysql_secure_installation
 ```
     
-3. Step 3: Start MySQL Server
+Step 3: Start MySQL Server
 
 ```sh
 sudo systemctl start mysql
 sudo systemctl status mysql.service
 ```​   
 
-4. Step 4: Verify MySQL Installation
+Step 4: Verify MySQL Installation
 
 ```sh 
 sudo mysql -u root
 ```
 
-5. Step 5: Create a New MySQL User
+Step 5: Create a New MySQL User
 
 ```sql
 CREATE USER 'btech'@'localhost' IDENTIFIED BY 'password';
