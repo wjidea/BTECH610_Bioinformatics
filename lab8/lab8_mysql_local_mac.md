@@ -32,7 +32,7 @@ After you install your local mysql server, you can complete the rest of the lab
 Open your Terminal, and type the following command
 
 ```sh
-mysql -u root -p -h localhost
+mysql -u root -p
 ```
 
 - create database
@@ -144,7 +144,7 @@ where gene_id=3;
 ```sql
 select * from Genes
 inner join Transcripts
-where gene_id=3;
+where Genes.gene_id=3;
 ```
 
 what do you notice about this query? How to fix the error?
