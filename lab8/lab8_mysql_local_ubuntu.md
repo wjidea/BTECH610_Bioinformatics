@@ -14,14 +14,16 @@ sudo mysql_secure_installation
     
 3. Step 3: Start MySQL Server
 
-```
+```sh
 sudo systemctl start mysql
-sudo systemctl status mysql.service.   
+sudo systemctl status mysql.service
 ```​   
 
 4. Step 4: Verify MySQL Installation
 
-`sh sudo mysql -u root`
+```sh 
+sudo mysql -u root
+```
 
 5. Step 5: Create a New MySQL User
 
