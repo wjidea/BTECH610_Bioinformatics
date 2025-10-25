@@ -2,19 +2,19 @@
 
 1. Step 1: Install Homebrew
 
-​		`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+​`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
 2. Step 2: Install MySQL Server
 
-    `brew install mysql`
+`brew install mysql`
     
 3. Step 3: Start MySQL Server
 
-    `brew services start mysql`​		
+`brew services start mysql`​		
 
 4. Step 4: Verify MySQL Installation
 
-    `mysql -u root`
+`mysql -u root`
 
 5. Step 5: Create a New MySQL User
 
