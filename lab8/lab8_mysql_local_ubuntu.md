@@ -5,23 +5,20 @@ Step 1: Update packages
 sudo apt update
 ```
 
-Step 2: Install MySQL Server
-
+Step 2: Install MySQL Server. 
 ```sh
 sudo apt install mysql-server
 sudo mysql_secure_installation
 ```
     
-Step 3: Start MySQL Server
-
+Step 3: Start MySQL Server. 
 ```sh
 sudo systemctl start mysql
 sudo systemctl status mysql.service
-```​   
+```
 
-Step 4: Verify MySQL Installation
-
-```sh 
+Step 4: Verify MySQL Installation. 
+```sh
 sudo mysql -u root
 ```
 
