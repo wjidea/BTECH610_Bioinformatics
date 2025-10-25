@@ -18,11 +18,11 @@
 
 5. Step 5: Create a New MySQL User
 
-    ```sql
+```sql
 CREATE USER 'btech'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON *.* TO 'btech'@'localhost' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
-    ```
+```
 
 After you install your local mysql server, you can complete the rest of the lab
 
