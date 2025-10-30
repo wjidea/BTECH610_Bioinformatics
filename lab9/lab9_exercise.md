@@ -2,15 +2,15 @@
 
 1. Connect to remote linux server hosted on AWS EC2
 
-__Replace user_name__ in the command below
+__Replace user_name and ip_address__ in the command below
 
 ```sh
-ssh username@ec2-34-215-52-146.us-west-2.compute.amazonaws.com
+ssh USER_NAME@IP_ADDRESS
 ```
 
 username is your school email user name
 
-Please find the IP address and password from your Email
+Please find the IP address and password from your course announcement
 
 
 
@@ -39,7 +39,7 @@ source ~/.bashrc
 4. Install package with conda
 
 ```sh
-conda install -y bioconda/label/cf201901::fastp
+conda install -y bioconda::fastp
 ```
 
 
@@ -66,10 +66,10 @@ fastp -i Sacc.R1.fastq.gz -I Sacc.R2.fastq.gz -o Sacc.R1.filter_fastq.gz -O Sacc
 
 ___NOTE: Run the following command on your local laptop___
 
-__Replace user_name__ in the command below
+__Replace user_name and ip_address__ in the command below
 
 ```sh
-scp user_name@ec2-34-215-52-146.us-west-2.compute.amazonaws.com:~/btech/lab9/Sacc_R12.fastp.html .
+scp USER_NAME@IP_ADDRESS:~/btech/lab9/Sacc_R12.fastp.html .
 ```
 
 
