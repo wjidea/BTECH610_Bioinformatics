@@ -20,8 +20,7 @@ conda activate btech
 ```sh
 conda config --add channels bioconda
 conda config --add channels conda-forge
-conda install samtools==1.21
-conda install bwa
+conda install -y samtools==1.21 bwa
 ```
 
 Don't panic if you see an error to install bwa when you are using a Apple Silicon MacBook
@@ -81,7 +80,7 @@ samtools sort -o Sacc_cer.aligned_renamed.sorted.bam Sacc_cer.aligned_renamed.ba
 
 ```sh
 samtools flagstats Sacc_bayanu.aligned_renamed.sorted.bam
-samtools flagstats Sacc_bayanu.aligned_renamed.bam
+samtools flagstats Sacc_cer.aligned_renamed.sorted.bam
 ```
 
 
@@ -99,4 +98,3 @@ samtools index Sacc_bayanu.aligned_renamed.sorted.bam
 
 https://igv.org/doc/desktop/#DownloadPage/
 
-If you are using a M1/M2 Apple chip you may need some extra configurations to make it to work. 
