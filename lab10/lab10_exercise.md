@@ -21,10 +21,8 @@ conda activate btech
 conda config --add channels bioconda
 conda config --add channels conda-forge
 conda install -y samtools==1.21 bwa
+conda update --all # optional, run this line if see errors while running samtools. 
 ```
-
-Don't panic if you see an error to install bwa when you are using a Apple Silicon MacBook
-
 
 
 4. Download reference genome and raw reads
@@ -97,4 +95,18 @@ samtools index Sacc_bayanu.aligned_renamed.sorted.bam
 10. Download and install IGV
 
 https://igv.org/doc/desktop/#DownloadPage/
+
+11. add reference genome to IGV
+1. select Genomes in the menu bar
+2. select load genome from file
+3. select the file Scerevisiae_renamed.fa
+
+12. load alignment
+1. select file in the menu bar
+2. select Load from file
+3. load the file Sacc_cer.aligned_renamed.sorted.bam
+
+13. Zoom in and check sequences
+1. use the zoom tool on the top right corner of the IGV window
+2. click the plus button a few time until you can see the aligned reads in the window
 
