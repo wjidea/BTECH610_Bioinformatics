@@ -25,10 +25,10 @@ curl -s https://raw.githubusercontent.com/wjidea/BTECH610_Bioinformatics/main/la
 ```sh
 conda activate btech
 conda install -c bioconda bcftools
-
-# for those who has issue with default version bcftools use older version
-conda install bioconda/label/cf201901::bcftools
 ```
+  
+for those who has issue with default version bcftools use older version
+`conda install bioconda/label/cf201901::bcftools`
 
 
 
