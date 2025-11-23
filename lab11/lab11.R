@@ -1,7 +1,7 @@
 # install packages is absent
 if (!require("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
-BiocManager::install(c("edgeR","limma", "Glimma"))
+BiocManager::install(c("edgeR","limma", "Glimma"), force=TRUE)
 install.packages(c("gplots", "RColorBrewer", "dplyr", "ggplot2"))
 
 getwd()
