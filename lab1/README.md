@@ -21,7 +21,7 @@ pwd  # present working directory
 
 touch file1.txt  # create an empty file 
 echo "ABC" > file2.txt  # create a file with ABC cc
-echo "ABC\nEFG" > file3.txt
+echo -e "ABC\nEFG" > file3.txt
 
 ls
 ```
