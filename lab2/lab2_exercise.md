@@ -194,6 +194,9 @@ You can download with the following command
 # Ubuntu
 curl -s https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -o Miniconda3-latest-Linux-x86_64.sh
 
+# Mac Apple silicon user
+curl -s https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh -o Miniconda3-latest-MacOSX-arm64.sh
+
 # install miniconda
 bash Miniconda3-latest-Linux-x86_64.sh
 ```
