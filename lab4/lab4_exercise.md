@@ -157,7 +157,7 @@ genetic_codon = {
 
 # Write your code here:
 # Hint1: make sure len(seq)%3==0
-# Hint2: use range. For example: range(1, len(seq), 3)
+# Hint2: use range. For example: range(0, len(seq), 3)
 
 
 ```
