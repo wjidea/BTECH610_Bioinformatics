@@ -26,7 +26,7 @@ https://github.com/
 
 https://github.com/new
 
-repository name: btech610
+repository name: btech510
 
 Make it public  and click create repository button
 
