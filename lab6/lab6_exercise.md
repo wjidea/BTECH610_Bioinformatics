@@ -144,7 +144,7 @@ git init
 git add README.md
 git commit -m "first commit"
 git branch -M main
-git remote add origin https://<MY_USERNAME>:<MYTOKEN>@github.com/<MY_USERNAME>/btech610.git
+git remote add origin https://<MY_USERNAME>:<MYTOKEN>@github.com/<MY_USERNAME>/btech510.git
 git push -u origin main
 ```
 
