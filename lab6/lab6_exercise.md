@@ -104,6 +104,10 @@ def parse_fasta_file(fasta_file_path):
 if __name__ == "__main__":
     parse_fasta_file(sys.argv[1])
 ```
+Alternatively, you can download the README.md file with the command below:
+```sh
+curl -s https://raw.githubusercontent.com/wjidea/BTECH610_Bioinformatics/refs/heads/main/lab6/README.md -o README.md
+```
 
 ### Code block with shell example
 ```sh
