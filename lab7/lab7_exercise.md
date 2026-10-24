@@ -33,30 +33,40 @@ Use curl to acquire gene information
 Find the species and database for a single identifier e.g. gene, transcript, protein
 
 First let's take a look what's in this API endpoint return
+
+Get the Genome ID
 ```sh
-curl -s 'https://rest.ensembl.org/lookup/id/ENSG00000157764?expand=1' \
--H 'Content-type:application/json' | jq
+BASE=https://www.ensembl.org/api
+GENOME=$(curl -s "$BASE/metadata/genomeid?assembly_accession_id=GCA_000001405.29" | jq -r '.genome_uuid')
+echo "$GENOME"
+```
+
+First look what gene api returns
+```sh
+curl -s "$BASE/graphql/core" -H 'Content-Type: application/json' -d @- <<EOF | jq
+{"query": "{ gene(by_id: {genome_id: \"$GENOME\", stable_id: \"ENSG00000157764\"}) { stable_id symbol name slice { region { name } location { start end } strand { code } } transcripts { stable_id } } }"}
+EOF
 ```
   
 Then, we can extract the parts we are interested.   
 ```sh
-curl -s 'https://rest.ensembl.org/lookup/id/ENSG00000157764?expand=1' \
--H 'Content-type:application/json' | \
-jq -r '[.seq_region_name, .start, .end] | @tsv'
+curl -s "$BASE/graphql/core" -H 'Content-Type: application/json' -d @- <<EOF \
+  | jq -r '.data.gene | [.slice.region.name, .slice.location.start, .slice.location.end] | @tsv'
+{"query": "{ gene(by_id: {genome_id: \"$GENOME\", stable_id: \"ENSG00000157764\"}) { slice { region { name } location { start end } } } }"}
+EOF
 ```
 
 Query with multiple gene IDs with a bulk query
 
 ```sh
-curl -s 'https://rest.ensembl.org/lookup/id' \
--H 'Content-type:application/json' \
--H 'Accept:application/json' \
--X POST \
--d '{ "ids" : ["ENSG00000157764", "ENSG00000171862" ] }' | \
-jq '.[] | .display_name'
+curl -s "$BASE/graphql/core" -H 'Content-Type: application/json' -d @- <<EOF \
+  | jq -r '.data[] | [.stable_id, .symbol] | @tsv'
+{"query": "{ a: gene(by_id: {genome_id: \"$GENOME\", stable_id: \"ENSG00000157764\"}) { stable_id symbol } b: gene(by_id: {genome_id: \"$GENOME\", stable_id: \"ENSG00000171862\"}) { stable_id symbol } }"}
+EOF
 ```
 
-For a full list of Ensembl REST API Endpoints: https://rest.ensembl.org/
+
+For a full list of GraphQL API Endpoints: [https://rest.ensembl.org/](https://www.ensembl.org/data/graphql)
 
 
 
